@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci e Contagem</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<header>
+		<h1>Fibonacci e Contagem</h1>
+	</header>
+	
+	<section id="fibonacci">
+		<h2>Sequência de Fibonacci</h2>
+		<p>Clique no botão abaixo para exibir a sequência de Fibonacci até o décimo termo:</p>
+		<button onclick="fibonacci()">Exibir Fibonacci</button>
+		<p id="fibonacci-result"></p>
+		
+		<script>
+			function fibonacci(n) {
+				if (n <= 1) {
+					return n;
+				}
+				return fibonacci(n - 1) + fibonacci(n - 2);
+			}
+
+			function displayFibonacci() {
+				let result = '';
+				for (let i = 0; i < 10; i++) {
+					result += fibonacci(i) + ' ';
+				}
+				document.getElementById('fibonacci-result').innerHTML = result;
+			}
+		</script>
+	</section>
+	
+	<section id="contagem">
+		<h2>Contagem</h2>
+		<p>Clique no botão abaixo para contar de 1 a 10:</p>
+		<button onclick="count()">Contar</button>
+		
+		<script>
+			function count() {
+				for (let i = 1; i <= 10; i++) {
+					console.log(i);
+				}
+			}
+		</script>
+	</section>
+	
+</body>
+</html>
